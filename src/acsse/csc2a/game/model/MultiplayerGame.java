@@ -34,7 +34,7 @@ public class MultiplayerGame extends Game {
 	
 	@Override
 	public String getDetails() {
-		return "Max Players: " + maxPlayers;
+		return "Multi-Player | Max Players: " + maxPlayers;
 	}
 	
 	@Override

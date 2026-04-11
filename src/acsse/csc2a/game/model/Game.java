@@ -34,7 +34,7 @@ public abstract class Game {
 		output.append("Title: " + title + "\n");
 		output.append("Genre: " + genre + "\n");
 		output.append("Rating: " + rating + "\n");
-		output.append("Status:" + status.getDisplayLabel() + "\n");
+		output.append("Status: " + status.getDisplayLabel() + "\n");
 		return output.toString();
 	}
 	

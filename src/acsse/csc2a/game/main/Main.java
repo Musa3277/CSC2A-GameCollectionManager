@@ -2,6 +2,7 @@ package acsse.csc2a.game.main;
 import acsse.csc2a.game.model.*;
 
 import java.io.File;
+import java.util.Collections;
 
 import acsse.csc2a.game.file.GameTextFileHandler;
 
@@ -44,6 +45,10 @@ public class Main {
 		File inputFile = new File("data/games-small.txt");
 		GameCollection myCollection2;
 		myCollection2 = GameTextFileHandler.readCollection(inputFile);
+		myCollection2.displayCollection();
+		
+		System.out.println("---PHASE 3---");
+		Collections.sort(myCollection2.getGames());
 		myCollection2.displayCollection();
 	}
 

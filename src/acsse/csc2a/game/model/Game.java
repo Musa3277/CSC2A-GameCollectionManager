@@ -39,7 +39,8 @@ public abstract class Game implements Comparable<Game> {
 	}
 	
 	/**
-	 *
+	 *override compareTo method.
+	 *Sorts by rating and breaks ties using title names
 	 */
 	@Override
 	public int compareTo(Game otherGame) {

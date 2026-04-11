@@ -2,7 +2,7 @@ package acsse.csc2a.game.model;
 
 
 
-public abstract class Game {
+public abstract class Game implements Comparable<Game> {
 
 	private String title;
 	private EGenre genre;
@@ -36,6 +36,18 @@ public abstract class Game {
 		output.append("Rating: " + rating + "\n");
 		output.append("Status: " + status.getDisplayLabel() + "\n");
 		return output.toString();
+	}
+	
+	/**
+	 *
+	 */
+	@Override
+	public int compareTo(Game otherGame) {
+		if (this.rating != otherGame.rating) {
+			return Double.compare(otherGame.rating, this.rating);
+		}
+		
+		return this.title.compareTo(otherGame.title);
 	}
 	
 	//Accessor methods

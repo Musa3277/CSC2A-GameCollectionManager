@@ -12,8 +12,8 @@ public class GameCollection {
 	 * constructor to instatiate the collection of games object
 	 * @param games list of games
 	 */
-	public GameCollection(ArrayList<Game> games) {
-		this.games = games;
+	public GameCollection() {
+		this.games = new ArrayList<>();
 	}
 	
 	//accessor

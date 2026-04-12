@@ -5,6 +5,8 @@ package acsse.csc2a.game.model;
  */
 public class SinglePlayerGame extends Game {
 
+	private static final long serialVersionUID = 1L;
+			
 	private double storyRating;
 	
 	/**

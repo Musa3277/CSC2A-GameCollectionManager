@@ -8,6 +8,8 @@ package acsse.csc2a.game.model;
  */
 public class MultiplayerGame extends Game {
 
+	private static final long serialVersionUID = 1L;
+	
 	private int maxPlayers;
 	/**
 	 * Constructor for multiplayer game object

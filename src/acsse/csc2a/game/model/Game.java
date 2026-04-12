@@ -1,9 +1,10 @@
 package acsse.csc2a.game.model;
+import java.io.Serializable;
 
 
+public abstract class Game implements Serializable, Comparable<Game> {
 
-public abstract class Game implements Comparable<Game> {
-
+	private static final long serialVersionUID = 1L;
 	private String title;
 	private EGenre genre;
 	private double rating; //0.0 to 10.0

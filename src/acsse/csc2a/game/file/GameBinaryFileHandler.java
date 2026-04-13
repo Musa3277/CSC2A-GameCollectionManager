@@ -12,12 +12,23 @@ import java.io.BufferedOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 
+/**
+ * Class to read/write Game objects to a binary file
+ * 
+ * @author Musawenkosi Masilela
+ * @version 1
+ */
 public class GameBinaryFileHandler {
 
 	public GameBinaryFileHandler() {
 		
 	}
 	
+	/**
+	 * Method to write Game objects to a binary file
+	 * @param handle file to write
+	 * @param games objects to write to file
+	 */
 	public static void writeGameDataFile(File handle, ArrayList<Game> games) {
 		
 
@@ -51,6 +62,12 @@ public class GameBinaryFileHandler {
 		}
 	}
 	
+	/**
+	 * Reads a binary file containing Game objects
+	 * @param handle
+	 * @return arrayList of games
+	 * @See Game
+	 */
 	public static ArrayList<Game> readGameDataFile(File handle) {
 		
 		ArrayList<Game> games = new ArrayList<>();

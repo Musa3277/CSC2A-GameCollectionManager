@@ -68,6 +68,8 @@ public class Main {
 			}
 		}
 		
+		System.out.println();
+		
 		Collections.sort(games);
 		for (Game myGame : games) {
 			if (myGame instanceof SinglePlayerGame) {

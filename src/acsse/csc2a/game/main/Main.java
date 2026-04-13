@@ -2,9 +2,11 @@ package acsse.csc2a.game.main;
 import acsse.csc2a.game.model.*;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Collections;
 
 import acsse.csc2a.game.file.GameTextFileHandler;
+import acsse.csc2a.game.file.GameBinaryFileHandler;
 
 public class Main {
 
@@ -50,6 +52,33 @@ public class Main {
 		System.out.println("---PHASE 3---");
 		Collections.sort(myCollection2.getGames());
 		myCollection2.displayCollection();
+		
+		System.out.println();
+		System.out.println("---PHASE 4---");
+		GameBinaryFileHandler.writeGameDataFile(new File("data/games.dat"), myCollection2.getGames());
+		
+		ArrayList<Game> games = GameBinaryFileHandler.readGameDataFile(new File("data/games.dat"));
+		for (Game myGame : games) {
+			if (myGame instanceof SinglePlayerGame) {
+				SinglePlayerGame spGame = (SinglePlayerGame) myGame;
+				System.out.println(spGame);
+			} else if (myGame instanceof MultiplayerGame) {
+				MultiplayerGame mpGame = (MultiplayerGame) myGame;
+				System.out.println(mpGame);
+			}
+		}
+		
+		Collections.sort(games);
+		for (Game myGame : games) {
+			if (myGame instanceof SinglePlayerGame) {
+				SinglePlayerGame spGame = (SinglePlayerGame) myGame;
+				System.out.println(spGame);
+			} else if (myGame instanceof MultiplayerGame) {
+				MultiplayerGame mpGame = (MultiplayerGame) myGame;
+				System.out.println(mpGame);
+			}
+		}
+		
 	}
 
 }
